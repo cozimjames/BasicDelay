@@ -239,7 +239,7 @@ void BasicDelayAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuff
             readIndex = 0;
         
         //same with write index
-        if (++readIndex >= delayBufferLength)
+        if (++writeIndex >= delayBufferLength)
             writeIndex = 0;
         
         //Assign output sample computed above to the output buffer
